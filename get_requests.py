@@ -1,5 +1,5 @@
 import requests
-OAUTH_TOKEN='a275d6ea683a3feec5784ca3b412e5cb9a468921'
+OAUTH_TOKEN=open('token','r').read()
 
 repos = requests.get('https://api.github.com/orgs/lodash/repos?access_token=' + OAUTH_TOKEN)
 json = repos.json()
